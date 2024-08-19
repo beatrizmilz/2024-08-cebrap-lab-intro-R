@@ -2,6 +2,7 @@
 title: "Tópico 2 - Importação de dados"
 author: "Beatriz"
 date: "`r Sys.Date()`"
+lang: pt
 ---
 
 ## Importação
@@ -183,63 +184,3 @@ Calculando a média do `vetor_com_na`:
 mean(vetor_com_na)
 mean(vetor_com_na, na.rm = TRUE)
 ```
-
-Exercícios:
-
-- Vamos usar os dados para o ano de 2010. Para isso é necessário filtrar os dados, e vamos ver como fazer isso no próximo tópico!
-
-```{r}
-dados_pnud_2010 <-  filter(dados_pnud, ano == 2010)
-```
-
-a) Qual era a soma da população do Brasil em 2010?
-```{r}
-# Soma de população em 2010: 
-sum(dados_pnud_2010$pop)
-```
-
-b) Qual era a média da expectativa de vida da população do Brasil em 2010?
-```{r}
-# média: expectativa de vida
-media_espvida <- mean(dados_pnud_2010$espvida)
-```
-
-Arredonde o valor encontrado nesse exercício, para apresentar 1 casa decimal:
-```{r}
-# arredondando para ter uma casa decimal
-round(media_espvida, 1)
-```
-
-c) Qual era a mediana da expectativa de vida da população do Brasil em 2010?
-```{r}
-# mediana: expectativa de vida
-median(dados_pnud_2010$espvida)
-```
-
-d) Qual era a variância da expectativa de vida da população do Brasil em 2010?
-```{r}
-# variância: expectativa de vida
-var(dados_pnud_2010$espvida)
-```
-
-e) Qual era o desvio padrão da expectativa de vida da população do Brasil em 2010?
-```{r}
-# desvio padrão: expectativa de vida
-sd(dados_pnud_2010$espvida)
-```
-
-f) Qual foi o maior valor encontado em um estado para a  expectativa de vida da população do Brasil em 2010?
-```{r}
-# maior valor encontrado
-max(dados_pnud_2010$espvida)
-```
-
-g) Qual foi o menor valor encontado em um estado para a  expectativa de vida da população do Brasil em 2010?
-```{r}
-# menor valor encontrado
-min(dados_pnud_2010$espvida)
-```
-
-
-
-

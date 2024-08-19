@@ -2,6 +2,7 @@
 title: "Tópico 3 - Manipulação de dados com dplyr"
 date: "`r Sys.Date()`"
 author: "Beatriz Milz"
+lang: pt
 ---
 
 Vamos começar carregando os pacotes que vamos utilizar neste script.
