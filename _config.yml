@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 title: "cebrap.lab online -  Introdução ao R"
+show_downloads: true
+link_material: 'https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R/archive/refs/heads/main.zip'
