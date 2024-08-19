@@ -1,0 +1,23 @@
+Aula;Material;Link
+1;Folhas de cola - cheatsheets;https://www.rstudio.com/resources/cheatsheets/
+1;rOpenSci - peer review aberto de software científico em R;https://ropensci.org/packages/all/
+1;Cheatsheet em Português - R base;https://raw.githubusercontent.com/rstudio/cheatsheets/main/translations/portuguese/base-r_pt_br.pdf
+1;PNUD - fonte da base de dados que usaremos;https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html
+1;Pacote onde os dados que usaremos estão disponíveis;https://abjur.github.io/abjData/
+2;Post - desvendando erros comuns no R;https://beatrizmilz.com/blog/2021-03-29-desvendando-erros/
+2;Livro - Análises ecológicas com R;https://analises-ecologicas.netlify.app/
+2;Post - criando mapas com tidyverse e geobr;https://beatrizmilz.com/blog/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/
+2;Vignette do geobr;https://ipeagit.github.io/geobr/articles/intro_to_geobr.html
+2;Vignette do mananciais;https://beatrizmilz.github.io/mananciais/articles/graficos.html
+2;Discourse - fórum de dúvidas;https://discourse.curso-r.com/
+2;CRAN - Repositório de pacotes ;https://cran.r-project.org/index.html
+2;Slides do curso de verão IME USP;https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides/
+2;Projeto base dos dados;https://basedosdados.org/
+3;Vignette do dplyr;https://dplyr.tidyverse.org/articles/dplyr.html
+3;Post sobre como importar dados do google sheets;https://beatrizmilz.com/blog/2022-03-08-googlesheets4/
+3;Pacote para tratar de dados categóricos;https://forcats.tidyverse.org/articles/forcats.html
+3;Para saber mais sobre o pipe |>;https://beatrizmilz.com/blog/2021-05-18-experimentando-o-r-410/
+3;Quarto - nova geração do RMarkdown;https://quarto.org/docs/get-started/hello/rstudio.html
+3;Pacote para combinar gráficos;https://patchwork.data-imaginist.com/articles/patchwork.html
+3;Pacote para trabalhar com textos;https://stringr.tidyverse.org/articles/stringr.html
+3;Funções para criar tabelas de frequências e porcentagens;https://cran.r-project.org/web/packages/janitor/vignettes/tabyls.html

@@ -1,0 +1,76 @@
+---
+title: "Tarefa 1 - Introdução ao R (Respostas)"
+author: "Seu nome aqui"
+date: 'Maio de 2022'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+O vetor abaixo apresenta a esperança de vida por UF no Brasil em 2010:
+
+```{r}
+esp_vida_2010 <- c(71.63, 70.32, 73.8, 73.3, 71.97, 72.6, 77.35, 75.1, 74.6, 70.4, 
+74.25, 74.96, 75.3, 72.36, 72, 74.8, 72.32, 71.62, 75.1, 72.52, 
+75.38, 72.97, 73.51, 76.61, 75.69, 71.84, 72.56)
+```
+
+
+5a - Qual é a classe desse vetor?
+
+```{r}
+class(esp_vida_2010)
+```
+
+
+5b - Quantos estados estão presentes neste vetor?
+
+```{r}
+length(esp_vida_2010)
+```
+
+
+5c - Calcule a média, mediana, variância e desvio padrão desse vetor.
+
+```{r}
+mean(esp_vida_2010)
+
+median(esp_vida_2010)
+
+var(esp_vida_2010)
+
+sd(esp_vida_2010)
+```
+
+5d - Encontre o valor mínimo e máximo deste vetor.
+
+```{r}
+min(esp_vida_2010)
+
+max(esp_vida_2010)
+```
+
+5e - Calcule a amplitude dos valores deste vetor (valor maximo - valor mínimo).
+
+```{r}
+max(esp_vida_2010) - min(esp_vida_2010)
+```
+
+
+5f - Experimente a função quantile() com o vetor criado. Ex: quantile(nome_do_vetor) . Compare com os outros valores retornados. O que você interpreta do resultado? O que significa os valores em 0%, 25%, 50%, 75%, 100%?
+
+
+```{r}
+quantile(esp_vida_2010)
+```
+
+5g - Arredonde os valores deste vetor para apenas 1 casa decimal.
+
+```{r}
+round(esp_vida_2010, 1)
+```
+
+
+6 - Aperte knit novamente, e veja o resultado. Cada pergunta tem a sua resposta apresentada com códigos?

@@ -1,0 +1,58 @@
+---
+title: "Tópico 3 - Manipulação de dados"
+author: "Document Author"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+1) Primeiro, precisamos carregar o pacote tidyverse, que será usado ao longo do script. Carregue aqui também outros pacotes que possa chegar a carregar
+
+```{r}
+library(tidyverse)
+library(knitr)
+```
+
+2) Precisamos carregar a base também: carregue o arquivo `base_pnud_min.csv` e salve no objeto `dados_pnud`.
+
+```{r}
+dados_pnud <- read_csv2("dados/base_pnud_min.csv")
+```
+
+
+3) Neste exercício, vamos criar uma tabela com as seguintes informações: Soma da população em milhões, no ano de 2010, agrupado por região do Brasil. A tabela deve estar ordenada de forma decrescente segundo a população em milhões. Exemplo do que queremos gerar:
+
+|Região	         |População em milhões (2010)|
+|----------------|---------|
+|Sudeste	       |  79.48  |
+|Nordeste	       |  52.01  |
+|Sul	           |  27.14  |
+|Norte	         |  15.18  |
+|Centro-Oeste	   |  13.84  |
+ 
+Escreva o código para gerar essa tabela no campo de código abaixo:
+
+```{r}
+
+
+
+
+```
+
+
+Caso queira realizar mais exercícios, experimente os exercícios:
+
+- [Materiais da disciplina de Analise de Dados para as Ciencias Sociais](https://jonnyphillips.github.io/Ciencia_de_Dados/abrindo_manipulando.html)
+
+- [deste capítulo de um livro focado em R](https://livro.curso-r.com/7-2-dplyr.html).
+
