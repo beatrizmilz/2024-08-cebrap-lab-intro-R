@@ -1,7 +1,8 @@
 ---
 title: "Tópico 1: Introdução ao R"
 author: "Beatriz Milz"
-date: '2023'
+date: '2024'
+lang: pt
 ---
 
 -   Diferença entre console e script.
@@ -32,7 +33,7 @@ date: '2023'
 ```
 
 
-##  Exercício
+###  Exercício
 
 1. Vamos usar o R para descorir a temperatura de hoje em Fahrenheit. Converta a temperatura de Celsius para Fahrenheit, usando a segunte fórmula: `TempF =  TempC * 1.8 + 32`: 
 
@@ -57,7 +58,7 @@ date: '2023'
 
 Exemplos:
 
-```{r echo=TRUE}
+```{r}
 # objeto do tipo texto: SEMPRE ENTRE ASPAS!
 meu_nome <- "Beatriz Milz"
 meu_nome
@@ -76,7 +77,7 @@ estuda <- TRUE
 estuda
 ```
 
-##  Exercício 
+###  Exercício 
 
 1. Crie objetos para armazenar informações sobre você: `nome` (texto), `idade` (numérico), `estuda` (verdadeiro ou falso).  
 
@@ -96,7 +97,7 @@ estuda
 
 -   O `R` é *case sensitive*, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado `teste` é diferente de uma outro objeto chamada `Teste`.
 
-##  Exercício 
+###  Exercício 
 
 1. Tente adivinhar o tipo dos objetos abaixo: 
 
@@ -121,7 +122,7 @@ gosta_carne <- "FALSE"
 
 - Estrutura: `nome_da_funcao(argumentos = ...)`
 
-##  Exercício
+###  Exercício
 
 1. Use a função `class()` e descubra qual é o tipo dos objetos apresentados no exercício anterior, e confira se a classe que você imaginou está correta.
 
@@ -200,7 +201,6 @@ primeiro_semestre[-1]
 # seleciona o elemento seis até o quatro 
 # (e muda a ordem dos elementos)
 primeiro_semestre[6:4]
-
 ```
 
 
@@ -224,7 +224,7 @@ sum(vetor_com_na) # somar os valores do vetor
 is.na(vetor_com_na)
 ```
 
-## Tarefa em grupo:
+### Exercício
 
 1. Crie um vetor com os valores das alturas de todas as pessoas do grupo. Salve ele em um objeto chamado `valores_alturas`:
 
@@ -281,7 +281,8 @@ is.na(vetor_com_na)
 
 - Documentação: `help(nome_da_funcao)` ou `?nome_da_funcao`.
 
-```{r, eval=FALSE}
+```{r}
+#| eval: false # não executar o código
 help(sum)
 ?sum
 ```
@@ -303,14 +304,16 @@ help(sum)
 
 - Instalação de Pacotes: `install.packages("nome-do-pacote")`. Para instalar o pacote use as aspas.
 
-```{{r}}
+```{r}
+#| eval: false # não executar o código
 install.packages("tidyverse")
 ```
 
 
 -  Carregar pacotes: `library(nome-do-pacote)`. Para carregar o pacote, não é necessário utilizar aspas.
 
-```{r, eval=TRUE, message=FALSE}
+```{r}
+#| message: false # não adicionar as mensagens no arquivo final
 library(tidyverse)
 ```
 
