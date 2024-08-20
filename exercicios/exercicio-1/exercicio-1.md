@@ -47,6 +47,14 @@ As etapas a seguir são opcionais, mas caso você não esteja confortável com a
 
 ## Parte 3 - Exercitando conceitos
 
+Daqui em diante, lembre-se de conferir se está com o projeto do curso (arquivo `.Rproj`) aberto! Você pode checar isso olhando no canto superior direito do RStudio:
+
+
+![imagem](https://github.com/user-attachments/assets/e87132f0-5e67-44ca-91cb-c22bdd947280)
+
+
+
+
 ### Exercícios do script da aula 1
 
 Faça os exercícios da [aula 1](https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R/blob/main/scripts/1-r-base.qmd) (caso algum tenha ficado por fazer).
@@ -56,9 +64,14 @@ Faça os exercícios da [aula 1](https://github.com/beatrizmilz/2024-08-cebrap-l
 
 1 - Crie um arquivo qmd (para relatórios), e salve o mesmo com o nome `tarefa-1.qmd`.
 
+![imagem](https://github.com/user-attachments/assets/3a1199f2-05ea-460b-a7d1-220f921d6221)
+
+
 2 - Nos metadados do arquivo (primeiras linhas), preencha seu nome, a data, e dê o título como `Tarefa 1 - Introdução ao R`.
 
-3 - Aperte knit e veja o que acontece!
+3 - Aperte Render e veja o que acontece!
+![imagem](https://github.com/user-attachments/assets/433813c1-6741-4cad-8dae-2d37920d4fef)
+
 
 ### Pausa para uma lista de funções que pode ajudar nos exercícios
 
