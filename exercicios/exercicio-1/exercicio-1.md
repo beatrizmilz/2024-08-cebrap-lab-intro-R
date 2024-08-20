@@ -53,7 +53,20 @@ Daqui em diante, lembre-se de conferir se está com o projeto do curso (arquivo 
 ![imagem](https://github.com/user-attachments/assets/e87132f0-5e67-44ca-91cb-c22bdd947280)
 
 
+Atenção: o exercício que usa as alturas foi imaginado para ser em grupo. Mas vocês podem criar um vetor com alturas de pessoas que moram com você, ou também pode usar a lista abaixo, com altura de algumas pessoas que participaram das Olimpíadas de 2024 e conquistaram medalhas:
 
+- [Rebeca Andrade](https://en.wikipedia.org/wiki/Rebeca_Andrade): 1,51m
+- [Beatriz Souza](https://en.wikipedia.org/wiki/Beatriz_Souza): 1,76m
+- [Ana Patrícia Silva Ramos](https://en.wikipedia.org/wiki/Ana_Patr%C3%ADcia): 1,94m
+- [Duda Lisboa](https://en.wikipedia.org/wiki/Duda_Lisboa): 1,80m
+- [William Lima](https://en.wikipedia.org/wiki/Willian_Lima): 1,65m
+- [Caio Bonfim](https://en.wikipedia.org/wiki/Caio_Bonfim): 1,74m
+- [Tatiana Weston-Webb](https://en.wikipedia.org/wiki/Tatiana_Weston-Webb): 1,63m
+- [Isaquias Queiroz](https://en.wikipedia.org/wiki/Isaquias_Queiroz): 1,75m
+- [Larissa Pimenta](https://en.wikipedia.org/wiki/Larissa_Pimenta): ???
+- [Rayssa Leal](https://en.wikipedia.org/wiki/Rayssa_Leal): 1,60m
+
+*Obs:* Essa lista não está completa! Aqui conseguimos ver outras pessoas: https://en.wikipedia.org/wiki/Brazil_at_the_2024_Summer_Olympics
 
 ### Exercícios do script da aula 1
 
