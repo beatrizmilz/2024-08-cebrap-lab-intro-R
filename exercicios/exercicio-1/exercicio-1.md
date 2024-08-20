@@ -47,6 +47,11 @@ As etapas a seguir são opcionais, mas caso você não esteja confortável com a
 
 ## Parte 3 - Exercitando conceitos
 
+### Exercícios do script da aula 1
+
+Faça os exercícios da [aula 1](https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R/blob/main/scripts/1-r-base.qmd) (caso algum tenha ficado por fazer).
+
+
 ### Preparando o exercício
 
 1 - Crie um arquivo qmd (para relatórios), e salve o mesmo com o nome `tarefa-1.qmd`.
