@@ -1,0 +1,290 @@
+---
+title: "Tópico 2 - Importação de dados"
+author: "Beatriz"
+date: "`r Sys.Date()`"
+lang: pt
+---
+
+## Importação
+
+```{r}
+library(readr)
+```
+
+
+- O formato mais comum que utilizamos são os Dataframes / tibble.
+
+- Possuem duas dimensões: linhas e colunas.
+
+- tidy data - https://www.jstatsoft.org/article/view/v059i10
+
+- Cada colunas pode ser de classes diferentes.
+
+- Pense em uma tabela, como está acostumada a ver no Excel por exemplo: View() 
+
+- Formatos comuns: CSV, excel, txt, entre outros.
+
+- Importando CSV:
+
+```{r}
+#| eval: false
+# Não recomendado!!
+# Caminho absoluto 
+read_csv2("/Users/beatrizmilz/Desktop/2024-08-cebrap-lab-intro-R-main/dados/base_pnud_min.csv")
+
+
+# /Users/marinalazarottodeandrade/Documents/Estudos/curso R/cebrap_introducao R/Treino curso
+
+
+# /Users/beatrizmilz/Desktop/2024-08-cebrap-lab-intro-R-main
+```
+
+
+```{r}
+# Caminho relativo! Parte do .Rproj/diretório de trabalho/working directory
+"dados/base_pnud_min.csv"
+```
+
+
+```{r}
+# install.packages("here")
+library(here)
+arquivo_para_ler <- here("dados/base_pnud_min.csv")
+arquivo_para_ler
+
+base_pnud <- read_csv2(arquivo_para_ler)
+```
+
+
+```{r}
+"../dados/base_pnud_min.csv"
+```
+
+```{r}
+library(readr)
+
+dados_pnud <- read_csv2("../dados/base_pnud_min.csv")
+
+```
+
+- Importando excel:
+
+```{r}
+library(readxl)
+pnud_excel <- read_excel("../dados/base_pnud.xlsx", sheet = "Sheet1")
+```
+
+- Podemos usar o Import dataset do RStudio! O importante é salvar o código no script. Exemplo:
+
+```{r}
+library(readr)
+base_pnud_min <- read_delim(
+  here("dados/base_pnud_min.csv"),
+  delim = ";",
+  escape_double = FALSE,
+  col_types = cols(muni_id = col_character()),
+  locale = locale(decimal_mark = ",", grouping_mark = "."),
+  trim_ws = TRUE
+)
+View(base_pnud_min)
+```
+
+
+Podemos também importar algumas bases diretamente da URL! 
+Exemplo 1: Execução orçamentária da PMSP:
+
+<http://orcamento.sf.prefeitura.sp.gov.br/orcamento/execucao.php>
+
+```{r}
+library(readr)
+basedadosexecucao_0824 <- read_delim(
+  "http://orcamento.sf.prefeitura.sp.gov.br/orcamento/uploads/2024/basedadosexecucao_0824.csv",
+  delim = ";",
+  escape_double = FALSE,
+  locale = locale(
+    decimal_mark = ",",
+    grouping_mark = ".",
+    encoding = "ISO-8859-1"
+  ),
+  trim_ws = TRUE
+)
+View(basedadosexecucao_0824)
+```
+
+
+```{r}
+library(readxl)
+url <- "http://orcamento.sf.prefeitura.sp.gov.br/orcamento/uploads/2024/basedadosexecucao_0824.xlsx"
+destfile <- "basedadosexecucao_0824.xlsx"
+curl::curl_download(url, destfile)
+excel_tab <- read_excel(destfile)
+View(excel_tab)
+```
+
+
+Exercício: Importe a base `dicionario_base_pnud_min.csv`:
+
+```{r}
+# Para casa!
+```
+
+## Padronizar nome das colunas
+
+O pacote janitor tem várias funções para limpar bases de dados!
+
+```{r}
+library(janitor)
+
+# exemplo:
+
+# checar nome das colunas da base iris
+names(iris)
+
+# limpar nomes das colunas da base iris, e salvar em um objeto
+# chamado iris_limpa
+iris_limpa <- clean_names(iris)
+
+# checar nome das colunas da base iris_limpa
+names(iris_limpa)
+```
+
+```{r}
+df_execucao <- clean_names(basedadosexecucao_0824)
+```
+
+
+
+
+## Salvando no computador
+
+- Salvando os dados em um arquivo csv:
+
+```{r}
+write_csv2(dados_pnud, "salvando_base_pnud.csv")
+```
+
+- Salvando os dados em um arquivo excel:
+
+```{r}
+library(writexl)
+write_xlsx(dados_pnud, "salvando_base_pnud.xlsx")
+```
+
+Exercício: Salve a base do dicionário dos dados do pnud com outro nome, por exemplo: `dicionario_pnud_output.csv`
+
+```{r}
+# PARA CASA
+```
+
+
+## Funções úteis para usar com dataframes
+
+```{r}
+# Retorna o número de colunas 
+ncol(dados_pnud)
+
+# Retorna o número de linhas
+nrow(dados_pnud)
+
+# Retorna o número de colunas e linhas
+dim(dados_pnud)
+dim(dados_pnud)[1] #numero colunas
+
+# primeiras linhas
+
+head(dados_pnud)
+View(head(dados_pnud, n = 100))
+tail(dados_pnud)
+
+library(dplyr)
+sorteio <- slice_sample(dados_pnud, n = 100)
+
+# nome das colunas
+names(dados_pnud)
+
+# dar uma "olhada" na base
+glimpse(dados_pnud)
+
+
+# selecionar_colunas(tabela, c(colunas_que_realmente_vai_usar))
+
+# selecionar da tabela dados_pnud as colunas
+select(dados_pnud, ano, muni_nm, espvida,  pop)
+
+# spoiler da próxima aula
+dados_pnud |> # ou %>% - ctrl + shift + m
+  select(ano, regiao_nm, uf_sigla, muni_nm, espvida,  pop) |> 
+  mutate(pop_milhoes = pop/1000000) |> 
+  filter(ano == 2010) |> 
+  group_by(regiao_nm, uf_sigla) |> 
+  summarise(
+    media_esp_vida = mean(espvida),
+    # ..... dá para explorar bastante
+    ) |> 
+  arrange(desc(media_esp_vida))
+
+
+```
+
+
+- Exercícios: Explore a base do dicionário do pnud. Quantas colunas tem? Quantas linhas tem? Quais informações essa pequena base apresenta?
+
+```{r}
+# Para casa
+```
+
+
+
+- Para selecionar colunas, utilize o `$`. Elas retornarão como vetores, e poderemos usar as funções que já conhecemos. Ex: `dados_pnud$ano`.
+
+
+- Dica: após escrever o `nome_do_dataframe$`, aperte `tab` para que o RStudio faça sugestões de colunas da base.
+
+- A função `unique()` retorna os valores únicos de um vetor. Exemplo: 
+
+```{r}
+unique(dados_pnud$ano)
+
+distinct(dados_pnud, ano)
+```
+
+Exercício: Use a função aprendida para criar um vetor com as siglas dos estados do Brasil.
+
+```{r}
+sort(unique(dados_pnud$uf_sigla))
+
+distinct(dados_pnud, regiao_nm, uf_sigla, ano) |> 
+  arrange(uf_sigla)
+```
+
+
+## Funções básicas
+
+
+|  Função |  O que retorna? |
+|--:|--:|
+|  `sum()` |  Soma  | 
+|  `mean()` |  Média |
+|  `median()` |  Mediana |
+|  `var()` |  Variância (simples) |
+|  `sd()` |  Desvio Padrão |
+|  `max()` |  Valor máximo  |
+|  `min()` |  Valor mínimo |
+|  `round(x, 2)` |  Valor arredondado |
+|  `sqrt()` |  Raíz quadrada |
+
+
+- Argumento importante: `na.rm = TRUE`
+
+Somando do `vetor_com_na`:
+```{r}
+vetor_com_na <- c(NA, 1, 5, 2, 5, NA)
+sum(vetor_com_na)
+sum(vetor_com_na, na.rm = TRUE)
+```
+
+Calculando a média do `vetor_com_na`:
+```{r}
+mean(vetor_com_na)
+mean(vetor_com_na, na.rm = TRUE)
+```

@@ -276,18 +276,34 @@ iris$Species[51]
 
 -   `NA` representa um valor desconhecido.
 
--   Operações envolvendo um valor desconhecido também será desconhecido. Exemplo:
+-   Operações envolvendo um valor desconhecido também será desconhecido.
+
+Exemplo:
 
 ```{r}
 vetor_com_na <- c(NA, 1, 5, 2, 5, NA)
 
 sum(vetor_com_na) # somar os valores do vetor
+
+# argumento na.rm = TRUE
+sum(vetor_com_na, na.rm = TRUE)
+mean(vetor_com_na, na.rm = TRUE)
+median(vetor_com_na, na.rm = TRUE)
+sd(vetor_com_na, na.rm = TRUE)
+var(vetor_com_na, na.rm = TRUE)
+min(vetor_com_na, na.rm = TRUE)
+max(vetor_com_na, na.rm = TRUE)
 ```
+
+Lembrete: olhar a documentação, na aba help, ou rodando `?funcao` ou `??funcao`. 
 
 -   `is.na()` é a função que testa se um objeto é NA.
 
 ```{r}
 is.na(vetor_com_na)
+
+vetor_com_na == 1
+vetor_com_na == NA # isso não funciona do jeito que imaginamos
 ```
 
 ### Exercício
@@ -348,11 +364,13 @@ is.na(vetor_com_na)
 #| eval: false # não executar o código
 help(sum)
 ?sum
+??starwars
 ```
 
 -   Se a dúvida permanecer, procure no Google ou pergunte no [Discourse](https://discourse.curso-r.com/).
 
 -   E se ainda tiver dúvidas, pergunte para a comunidade (há grupos no Telegram e outras redes sociais).
+
 
 ## Instalar pacotes
 
@@ -367,6 +385,7 @@ help(sum)
 ```{r}
 #| eval: false # não executar o código
 install.packages("tidyverse")
+install.packages("janitor")
 ```
 
 -   Carregar pacotes: `library(nome-do-pacote)`. Para carregar o pacote, não é necessário utilizar aspas.
@@ -376,9 +395,39 @@ install.packages("tidyverse")
 library(tidyverse)
 ```
 
+- `dplyr::filter()`: `pacote::funcao()`.
+
+
+```{r}
+#| eval: false
+# Instalar pacotes do GitHub
+install.packages("remotes")
+library(remotes)
+install_github("cienciadedatos/dados")
+```
+
+
+
+
+```{r}
+library(dados)
+pinguins
+```
+
 ```{r}
 glimpse(starwars)
 ```
 
 
+# Exemplo ---
 
+```{r}
+tabela <- geobr::list_geobr()
+
+sp <- geobr::read_state("SP")
+
+library(ggplot2)
+sp |> 
+  ggplot() +
+  geom_sf()
+```
