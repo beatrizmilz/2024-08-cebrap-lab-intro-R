@@ -86,7 +86,8 @@ base_pnud_min <- read_delim(
   locale = locale(decimal_mark = ",", grouping_mark = "."),
   trim_ws = TRUE
 )
-View(base_pnud_min)
+
+head(base_pnud_min)
 ```
 
 
@@ -108,7 +109,7 @@ basedadosexecucao_0824 <- read_delim(
   ),
   trim_ws = TRUE
 )
-View(basedadosexecucao_0824)
+head(basedadosexecucao_0824)
 ```
 
 
@@ -118,7 +119,7 @@ url <- "http://orcamento.sf.prefeitura.sp.gov.br/orcamento/uploads/2024/basedado
 destfile <- "basedadosexecucao_0824.xlsx"
 curl::curl_download(url, destfile)
 excel_tab <- read_excel(destfile)
-View(excel_tab)
+head(excel_tab)
 ```
 
 
@@ -193,7 +194,7 @@ dim(dados_pnud)[1] #numero colunas
 # primeiras linhas
 
 head(dados_pnud)
-View(head(dados_pnud, n = 100))
+# View(head(dados_pnud, n = 100))
 tail(dados_pnud)
 
 library(dplyr)

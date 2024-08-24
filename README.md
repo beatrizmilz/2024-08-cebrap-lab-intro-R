@@ -27,22 +27,12 @@ Para saber de próximos oferecimentos, entre em contato com
 
 <!-- - [Slide de dicas - evitando erros](https://beatrizmilz.github.io/2023-06-cebrap-lab-intro-R/slides/aula-2.html) -->
 
-### Scripts
+### Scripts e exercícios
 
-Abaixo estão os scripts usados no RStudio após a aula:
+Disponíveis no [repositório do GitHub](https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R). 
 
-Em breve!
+[Clique aqui para fazer download do repositório.](https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R/archive/refs/heads/main.zip)
 
-<!-- - [R Base](https://github.com/beatrizmilz/2023-06-cebrap-lab-intro-R/blob/main/scripts-pos-aula/1-r-base.qmd) -->
-<!-- - [Importação](https://github.com/beatrizmilz/2023-06-cebrap-lab-intro-R/blob/main/materiais_rstudio_cloud_pos_aula/Topico-2-importacao/2-importacao.Rmd) -->
-<!-- - [Manipulação](https://github.com/beatrizmilz/2023-06-cebrap-lab-intro-R/blob/main/materiais_rstudio_cloud_pos_aula/Topico-3-manipulacao/3-manipulacao.Rmd) -->
-<!-- - [Baixar zip completo](https://github.com/beatrizmilz/2023-06-cebrap-lab-intro-R/raw/main/material_completo.zip)  -->
-
-### Exercícios
-
-- Atenção: os arquivos dos exercícios contém as respostas.
-
-- [Exercícios](https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R/tree/main/exercicios)
 
 ## Materiais para estudar mais
 

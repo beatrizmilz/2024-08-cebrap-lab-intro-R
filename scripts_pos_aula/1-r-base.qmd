@@ -4,7 +4,6 @@ author: "Beatriz Milz"
 date: '2024-08-19'
 lang: pt
 toc: true
-format: docx
 ---
 
 -   Diferença entre console e script.
@@ -116,8 +115,8 @@ estuda
 
 ```{r}
 # 123asdas
-abc_123
-abc.123
+# abc_123
+# abc.123
 
 # snake case
 # Beatriz Milz
