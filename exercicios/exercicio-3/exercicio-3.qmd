@@ -52,7 +52,6 @@ Escreva o código para gerar essa tabela no campo de código abaixo:
 
 Caso queira realizar mais exercícios, experimente os exercícios:
 
+- <https://cienciadedatos.github.io/pt-r4ds/data-transform.html>
+
 - [Materiais da disciplina de Analise de Dados para as Ciencias Sociais](https://jonnyphillips.github.io/Ciencia_de_Dados/abrindo_manipulando.html)
-
-- [deste capítulo de um livro focado em R](https://livro.curso-r.com/7-2-dplyr.html).
-
